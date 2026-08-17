@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <title>스테이블코인의 본질과 기업 도입 전략</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css" id="theme">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/monokai.css">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+  <style>
+    :root {
+      --r-main-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
+      --r-heading-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans KR", sans-serif;
+      --r-heading-color: #1a365d;
+      --r-main-color: #2d3748;
+    }
+    .reveal { font-size: 26px; }
+    .reveal h1, .reveal h2, .reveal h3 { font-weight: 700; text-transform: none; }
+    .reveal h2 { color: #2b6cb0; border-bottom: 2px solid #e2e8f0; padding-bottom: 12px; margin-bottom: 25px; }
+    .reveal table { font-size: 0.75em; width: 100%; border-collapse: collapse; margin: 15px 0; }
+    .reveal th { background-color: #2b6cb0; color: #fff; padding: 10px; text-align: center; }
+    .reveal td { padding: 8px 12px; border: 1px solid #e2e8f0; vertical-align: middle; }
+    .reveal tr:nth-child(even) { background-color: #f7fafc; }
+    .box { background: #edf2f7; border-left: 5px solid #3182ce; padding: 15px 20px; border-radius: 4px; margin-bottom: 15px; }
+    .box-alert { background: #fff5f5; border-left: 5px solid #e53e3e; padding: 15px 20px; border-radius: 4px; margin-bottom: 15px; }
+    .box-success { background: #f0fff4; border-left: 5px solid #38a169; padding: 15px 20px; border-radius: 4px; margin-bottom: 15px; }
+    .columns { display: flex; gap: 30px; }
+    .column { flex: 1; }
+    .tag { display: inline-block; padding: 3px 8px; border-radius: 4px; font-weight: 600; font-size: 0.8em; color: white; }
+    .tag-blue { background-color: #3182ce; }
+    .tag-green { background-color: #38a169; }
+    .tag-red { background-color: #e53e3e; }
+    .tag-orange { background-color: #dd6b20; }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- Slide 1: Title -->
+      <section style="text-align: center;">
+        <h1 style="font-size: 2em; color: #2b6cb0; margin-bottom: 10px;">스테이블코인의 본질과<br>기업 도입 전략</h1>
+        <h3 style="font-size: 1.1em; color: #4a5568; font-weight: 400; margin-bottom: 30px;">글로벌 7대 기관 리포트 종합 분석 및 실무 가이드 (10분 발표)</h3>
+        <p style="font-size: 0.8em; color: #718096;">디지털 자산 리서치팀</p>
+      </section>
+
+      <!-- Slide 2: Agenda -->
+      <section>
+        <h2>⏱️ 발표 아젠다 (10분 코스)</h2>
+        <div class="columns">
+          <div class="column">
+            <div class="box">
+              <h3 style="font-size: 0.95em; color: #2b6cb0; margin-bottom: 10px;">Part I. 거시 분석 & 리포트 종합 (5분)</h3>
+              <ul style="font-size: 0.85em; line-height: 1.6;">
+                <li><strong>문제 제기</strong>: 왜 글로벌 기관들은 주목하는가?</li>
+                <li><strong>글로벌 7대 핵심 보고서 맵</strong> (FSB, Fed, BIS, ECB, Citi)</li>
+                <li><strong>규제 당국 vs 시장(투자은행)</strong> 시각 차이</li>
+                <li><strong>스테이블코인 3대장</strong> (USDT, USDC, DAI) 비교</li>
+              </ul>
+            </div>
+          </div>
+          <div class="column">
+            <div class="box">
+              <h3 style="font-size: 0.95em; color: #2b6cb0; margin-bottom: 10px;">Part II. 리스크 & 기업 실무 전략 (5분)</h3>
+              <ul style="font-size: 0.85em; line-height: 1.6;">
+                <li><strong>보고서가 경고하는 5대 핵심 리스크</strong></li>
+                <li><strong>핵심 뇌관</strong>: 결제 완결성(Finality)과 장부 괴리</li>
+                <li><strong>기업 부서별 도입 실무 체크리스트</strong> (재무/법무/회계/IT)</li>
+                <li><strong>결론</strong>: 법인 도입을 위한 <strong>3대 황금률</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 3: Why Stablecoins -->
+      <section>
+        <h2>1. 왜 글로벌 기관들은 스테이블코인에 주목하는가?</h2>
+        <div class="columns">
+          <div class="column">
+            <div class="box-success">
+              <h3 style="font-size: 0.9em; color: #276749;">⚡ 기회 (Opportunity)</h3>
+              <ul style="font-size: 0.8em; line-height: 1.6;">
+                <li><strong>24/7/365 실시간 즉시 결제</strong>: 글로벌 송금 수수료 최대 80% 절감</li>
+                <li><strong>프로그래머블 머니</strong>: 스마트 계약을 통한 조건부 자동 청산/정산</li>
+                <li><strong>RWA 토큰화 인프라</strong>: 2030년 5조 달러 규모 디지털 머니 시대</li>
+              </ul>
+            </div>
+          </div>
+          <div class="column">
+            <div class="box-alert">
+              <h3 style="font-size: 0.9em; color: #9b2c2c;">⚠️ 위협 (Systemic Risk)</h3>
+              <ul style="font-size: 0.8em; line-height: 1.6;">
+                <li><strong>그림자 은행(Shadow Banking)</strong>: 준비금 부실 시 연쇄 뱅크런 위험</li>
+                <li><strong>통화 주권 침해</strong>: 은행 예금 대량 이탈 및 대출 중개 기능 축소</li>
+                <li><strong>자금세탁(AML) 및 규제 검열</strong>: 전 세계적 규제 단속 격화</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="box" style="margin-top: 15px; text-align: center;">
+          <strong style="color: #2b6cb0;">핵심 질문:</strong> <em>"기업은 비즈니스 효율을 극대화하면서도 규제·재무적 파단을 어떻게 회피할 것인가?"</em>
+        </div>
+      </section>
+
+      <!-- Slide 4: Global Reports Map -->
+      <section>
+        <h2>2. 글로벌 7대 핵심 보고서 맵</h2>
+        <table>
+          <thead>
+            <tr>
+              <th width="20%">기관</th>
+              <th width="35%">핵심 보고서명</th>
+              <th width="45%">핵심 메시지 및 규제 기준</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>FSB</strong> (2023)</td>
+              <td><em>High-level Recommendations for GSC</em></td>
+              <td><strong>"동일 행위, 동일 규제"</strong> + 1:1 법적 즉시 환매권 의무화</td>
+            </tr>
+            <tr>
+              <td><strong>미 백악관 PWG</strong> (2021)</td>
+              <td><em>Report on Stablecoins</em></td>
+              <td>결제용 스테이블코인 발행사는 <strong>"연방 공인 은행"</strong>으로 제한</td>
+            </tr>
+            <tr>
+              <td><strong>BIS / CPMI-IOSCO</strong> (2022)</td>
+              <td><em>Application of PFMI to Stablecoins</em></td>
+              <td>퍼블릭 체인의 <strong>결제 완결성(Principle 8)</strong> 리스크 해결 필수</td>
+            </tr>
+            <tr>
+              <td><strong>ECB</strong> (2020)</td>
+              <td><em>Stablecoins: Implications in Euro Area</em></td>
+              <td>은행 예금 대량 이탈(Disintermediation) 및 통화정책 훼손 경고</td>
+            </tr>
+            <tr>
+              <td><strong>Citi GPS</strong> (2023)</td>
+              <td><em>Money, Tokens, and Games</em></td>
+              <td>2030년 <strong>4~5조 달러 RWA 토큰화</strong>와 무역금융 디지털 혁신</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Slide 5: Regulators vs Market -->
+      <section>
+        <h2>3. 규제 당국 vs 시장(투자은행)의 시각 비교</h2>
+        <div class="columns">
+          <div class="column">
+            <div class="box-alert">
+              <h3 style="font-size: 0.9em; color: #9b2c2c;">🏛️ 규제·감독 기구 (FSB, Fed, BIS, ECB)</h3>
+              <ul style="font-size: 0.78em; line-height: 1.5;">
+                <li><strong>본질</strong>: 사설 지폐이자 잠재적 <strong>금융위기 전염원</strong></li>
+                <li><strong>준비금 요건</strong>: 100% 현금 및 초단기 미 국채 신탁 보관</li>
+                <li><strong>구조 제한</strong>: 알고리즘형 완전 배제, 법적 책임 주체 필수</li>
+                <li><strong>최종 지향점</strong>: 중앙은행 CBDC 및 은행의 토큰화 예금</li>
+              </ul>
+            </div>
+          </div>
+          <div class="column">
+            <div class="box-success">
+              <h3 style="font-size: 0.9em; color: #276749;">📈 시장 & 투자은행 (Citi GPS)</h3>
+              <ul style="font-size: 0.78em; line-height: 1.5;">
+                <li><strong>본질</strong>: 글로벌 금융 백엔드를 교체할 <strong>'디지털 머니 2.0'</strong></li>
+                <li><strong>비즈니스 기회</strong>: 무역금융 종이 서류 300억 장 디지털화</li>
+                <li><strong>자산 혁신</strong>: 사모펀드, 부동산, 채권 등 비유동 자산 토큰화</li>
+                <li><strong>최종 지향점</strong>: 스마트 법률 계약(SLC)과 온체인 24/7 자동 정산</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 6: USDT vs USDC vs DAI -->
+      <section>
+        <h2>4. 스테이블코인 3대장 (USDT vs USDC vs DAI) 비교</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>비교 항목</th>
+              <th>USDT (Tether)</th>
+              <th>USDC (Circle)</th>
+              <th>DAI (MakerDAO / Sky)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>담보 구조</strong></td>
+              <td>미 국채(~80%) + 비트코인/금/대출</td>
+              <td>미 국채(BlackRock MMF) + 현금 100%</td>
+              <td>암호화폐 과담보 + RWA + USDC</td>
+            </tr>
+            <tr>
+              <td><strong>투명성 / 감사</strong></td>
+              <td>분기별 BDO <strong>증명(Attestation)</strong></td>
+              <td>매월 Deloitte <strong>감사 및 CUSIP 공시</strong></td>
+              <td>온체인 <strong>24/7 실시간 100% 공개</strong></td>
+            </tr>
+            <tr>
+              <td><strong>시장 점유율</strong></td>
+              <td><span class="tag tag-blue">점유율 1위 (~70%)</span> CEX/해외 결제</td>
+              <td><span class="tag tag-blue">점유율 2위 (~20%)</span> 기관/DeFi 기축</td>
+              <td><span class="tag tag-blue">탈중앙 1위 (~3.5%)</span> 온체인 대출</td>
+            </tr>
+            <tr>
+              <td><strong>규제 적격성</strong></td>
+              <td><span class="tag tag-red">취약</span> 오프쇼어, EU MiCA 비적격</td>
+              <td><span class="tag tag-green">최상</span> 미국 규제 준수, MiCA 인가</td>
+              <td><span class="tag tag-orange">중립</span> DAO 기반, 간접 규제 노출</td>
+            </tr>
+            <tr>
+              <td><strong>주소 동결 권한</strong></td>
+              <td><strong>보유</strong> (중앙 관리자 동결)</td>
+              <td><strong>보유</strong> (OFAC 제재 적극 반영)</td>
+              <td><strong>불가</strong> (스마트 컨트랙트 불변)</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="box" style="font-size: 0.8em; text-align: center; margin-top: 10px;">
+          💡 <strong>요약:</strong> 트레이딩 유동성은 <strong>USDT</strong>, 기업 규제 안정성은 <strong>USDC</strong>, 검열 저항성은 <strong>DAI</strong>가 우수.
+        </div>
+      </section>
+
+      <!-- Slide 7: 5 Major Risks -->
+      <section>
+        <h2>5. 보고서가 경고하는 5대 핵심 리스크</h2>
+        <div class="columns">
+          <div class="column">
+            <div class="box-alert">
+              <strong style="color: #c53030;">1. 런(Run) & 디페깅 리스크</strong>
+              <p style="font-size: 0.75em; margin-top: 5px;">대규모 환매 시 비유동 준비금으로 $1 이탈 (2023 SVB 파산 시 USDC $0.87 급락)</p>
+            </div>
+            <div class="box-alert">
+              <strong style="color: #c53030;">2. 법적 파산 격리 부재</strong>
+              <p style="font-size: 0.75em; margin-top: 5px;">준비금이 신탁 분리되지 않으면 발행사 파산 시 일반 무담보 채권자로 전락</p>
+            </div>
+            <div class="box-alert">
+              <strong style="color: #c53030;">3. OFAC 제재 및 강제 동결</strong>
+              <p style="font-size: 0.75em; margin-top: 5px;">오염된 자금과 1회라도 연루 시 법인 지갑 전체가 블랙리스트 동결</p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="box-alert">
+              <strong style="color: #c53030;">4. 결제 완결성(Finality) 괴리</strong>
+              <p style="font-size: 0.75em; margin-top: 5px;">퍼블릭 체인의 확률적 완결성 및 하드포크로 인한 ERP 장부 불일치</p>
+            </div>
+            <div class="box-alert">
+              <strong style="color: #c53030;">5. 키 관리 및 브릿지 해킹</strong>
+              <p style="font-size: 0.75em; margin-top: 5px;">웹3 전체 해킹의 70%가 크로스체인 브릿지 및 프라이빗 키 유출에서 발생</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 8: Deep Dive - Settlement Finality -->
+      <section>
+        <h2>6. [심층] 왜 '결제 완결성'이 기업 회계의 뇌관인가?</h2>
+        <div class="box-alert" style="font-size: 0.85em;">
+          <strong>BIS / CPMI-IOSCO PFMI 원칙 8:</strong> 전통 금융은 송금 승인 즉시 법적 종결되지만, <strong>퍼블릭 블록체인은 '확률적 완결성(Probabilistic Finality)'</strong>을 가집니다.
+        </div>
+        <div class="box" style="font-size: 0.8em; line-height: 1.6;">
+          <p><strong>🚨 기업 리스크 시나리오:</strong></p>
+          <ul>
+            <li>온체인 트랜잭션이 발생하여 ERP에 '입금 완료' 처리했으나, 네트워크 포크(Fork)로 거래가 취소/롤백되는 경우 발생.</li>
+            <li><strong>회계 감사 시점의 온체인 상태와 내부 장부 간 불일치로 '감사 의견 거절' 위험</strong> 직면.</li>
+          </ul>
+        </div>
+        <div class="box-success" style="font-size: 0.8em;">
+          <strong>✅ 기업 실무 대응책:</strong> 거래소/발행사 레벨의 법적 완결 합의 및 컨펌 블록 수(예: 32+ 블록) 안전 마진을 필수 확보.
+        </div>
+      </section>
+
+      <!-- Slide 9: Checklist Part 1 -->
+      <section>
+        <h2>7. 기업 실무 체크리스트: 재무 & 컴플라이언스</h2>
+        <div class="columns">
+          <div class="column">
+            <div class="box">
+              <h3 style="font-size: 0.9em; color: #2b6cb0;">💰 재무·자금팀 (Treasury)</h3>
+              <ul style="font-size: 0.75em; line-height: 1.6;">
+                <li>[ ] <strong>규제 적격 코인 선정</strong>: 100% 국채/현금 신탁 보관 여부 확인</li>
+                <li>[ ] <strong>유럽 MiCA 인가 코인 채택</strong>: EU 거래처 대상 규제 위반 방지</li>
+                <li>[ ] <strong>Fiat Ramp 사전 개설</strong>: 대규모 현금(USD/KRW) 즉시 인출 채널 구축 (Circle Mint 등)</li>
+                <li>[ ] <strong>포트폴리오 분산</strong>: 단일 코인/단일 체인 집중 위험 차단</li>
+              </ul>
+            </div>
+          </div>
+          <div class="column">
+            <div class="box">
+              <h3 style="font-size: 0.9em; color: #2b6cb0;">⚖️ 법무·컴플라이언스팀 (Legal)</h3>
+              <ul style="font-size: 0.75em; line-height: 1.6;">
+                <li>[ ] <strong>온체인 KYT 도구 의무 도입</strong>: Chainalysis 등으로 거래처 지갑 제재(OFAC) 연루 사전 스크리닝</li>
+                <li>[ ] <strong>외국환거래법 검토</strong>: 해외 대금 결제 시 외국환 신고 절차 및 가상자산이용자보호법 준수</li>
+                <li>[ ] <strong>발행사 ToS(이용약관) 확인</strong>: 법인이 발행사에 직접 1:1 환매를 청구할 수 있는 권한 확보</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 10: Checklist Part 2 -->
+      <section>
+        <h2>8. 기업 실무 체크리스트: 회계 & IT 보안</h2>
+        <div class="columns">
+          <div class="column">
+            <div class="box">
+              <h3 style="font-size: 0.9em; color: #2b6cb0;">📊 회계·세무팀 (Accounting)</h3>
+              <ul style="font-size: 0.75em; line-height: 1.6;">
+                <li>[ ] <strong>K-IFRS 계정 분류</strong>: 영업용(재고자산) vs 투자용(무형자산) 회계 정책 수립</li>
+                <li>[ ] <strong>실시간 외환차손익 연동</strong>: 블록체인 거래 시점의 환율을 ERP(SAP 등)에 자동 반영</li>
+                <li>[ ] <strong>법인세 과세표준 결산</strong>: 온체인 가스비(Gas Fee) 및 평가차손익 일별 집계</li>
+              </ul>
+            </div>
+          </div>
+          <div class="column">
+            <div class="box">
+              <h3 style="font-size: 0.9em; color: #2b6cb0;">🔐 IT·정보보안팀 (Security)</h3>
+              <ul style="font-size: 0.75em; line-height: 1.6;">
+                <li>[ ] <strong>개인용 핫월렛(Metamask) 금지</strong>: **MPC / 멀티시그(Safe, Fireblocks)** 결재 시스템 구축</li>
+                <li>[ ] <strong>콜드/핫 월렛 분리(Tiering)</strong>: 결제용 소액만 핫월렛, 유보 자금은 콜드 스토리지 보관</li>
+                <li>[ ] <strong>검증된 브릿지만 사용</strong>: 비공식 브릿지 금지, 공식 전송 프로토콜(Circle CCTP 등) 사용</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 11: 3 Golden Rules -->
+      <section style="text-align: center;">
+        <h2>9. 결론: 기업 스테이블코인 도입 3대 황금률</h2>
+        <div style="margin: 40px auto; max-width: 1000px; text-align: left;">
+          <div class="box-success" style="font-size: 1.1em; margin-bottom: 20px;">
+            🥇 <strong>1. 규제된 코인을 골라라 (Regulated Reserves)</strong><br>
+            <span style="font-size: 0.75em; color: #4a5568;">회계 감사와 준비금 파산 격리가 명확한 제도권 스테이블코인을 최우선으로 선택.</span>
+          </div>
+          <div class="box-alert" style="font-size: 1.1em; margin-bottom: 20px;">
+            🥈 <strong>2. 지갑 주소도 신원 조회를 거쳐라 (On-Chain KYC/AML)</strong><br>
+            <span style="font-size: 0.75em; color: #4a5568;">오염된 자금이 섞이면 법인 지갑 전체가 동결되므로 사전 온체인 KYT 검증 필수.</span>
+          </div>
+          <div class="box" style="font-size: 1.1em;">
+            🥉 <strong>3. 보안은 멀티시그로 통제하라 (Enterprise Custody)</strong><br>
+            <span style="font-size: 0.75em; color: #4a5568;">1인 단일 서명 지갑을 금지하고 복수 결재 승인 라인이 프로그래밍된 엔터프라이즈 커스터디 도입.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 12: Q&A -->
+      <section style="text-align: center;">
+        <h1 style="color: #2b6cb0; margin-bottom: 20px;">Q & A</h1>
+        <h3 style="color: #4a5568; font-weight: 400; margin-bottom: 40px;">경청해 주셔서 감사합니다.</h3>
+        <div class="box" style="display: inline-block; text-align: left; font-size: 0.8em;">
+          <strong>📄 관련 산출물 및 참고 문서:</strong>
+          <ul style="margin-top: 8px;">
+            <li>상세 보고서: <a href="stablecoin_reports.md">stablecoin_reports.md</a></li>
+            <li>3대 코인 비교표: <a href="stablecoin_comparison.md">stablecoin_comparison.md</a></li>
+            <li>글로벌 원문 PDF: <code>reports/</code> 폴더 내 7편</li>
+          </ul>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: true,
+      transition: 'slide',
+      plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+    });
+    mermaid.initialize({ startOnLoad: true, theme: 'default' });
+  </script>
+</body>
+</html>
